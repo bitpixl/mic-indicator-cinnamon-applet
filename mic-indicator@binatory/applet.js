@@ -77,9 +77,9 @@ MyApplet.prototype = {
 
   _update: function () {
     if (this._input.is_muted) {
-      this.set_applet_label('Muted');
+      this.set_applet_label('');
       this.set_applet_icon_symbolic_name(
-        'microphone-sensitivity-muted-symbolic'
+        'microphone-disabled-symbolic.symbolic'
       );
     } else {
       const value = Math.floor((this._input.volume * 100) / this._volumeMax);
@@ -94,7 +94,7 @@ MyApplet.prototype = {
         icon = 'high';
       }
       this.set_applet_icon_symbolic_name(
-        'microphone-sensitivity-' + icon + '-symbolic'
+        'microphone-sensitivity-high-symbolic.symbolic'
       );
     }
   },
